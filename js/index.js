@@ -1,6 +1,17 @@
 imageIndex = 0
 
 async function fetchPosters(){
+
+    let posters = document.getElementsByClassName("poster")
+
+    if(posters){
+        console.log(posters)
+        for(i = 0; i < posters.length; i++){
+            posters[i].remove()
+        }
+    }
+
+
     await fetch("https://raw.githubusercontent.com/Mythic2012/tvhomepage/refs/heads/main/image_list.txt")
     .then(function(res){ return res.text()})
     .then(function(data){
@@ -114,7 +125,7 @@ async function clockHandler(){
     document.getElementById("clock").innerHTML = `${fixTimes(fixTimes(hours, 3), 1)}:${fixTimes(minutes, 1)}:${fixTimes(seconds, 1)}<a id="clockSuffix">${suffix}</a>`
 
     //changing times & fetch new posters (if any)
-    if(hours == 0 && minutes == 0 && seconds == 5){
+    if(hours == 0 && minutes == 0 && seconds == 1){
         await handleTimes()
         await fetchPosters()
     }
@@ -123,7 +134,7 @@ async function clockHandler(){
     setTimeout(clockHandler, 1000)
 }
 
-function changeImage(){
+function changeImage(input){
     let posters = document.getElementsByClassName("poster");
 
     for (i = 0; i < posters.length; i++) {
@@ -137,7 +148,9 @@ function changeImage(){
     posters[imageIndex].style.display = "block"
     imageIndex++
 
-    setTimeout(changeImage, 6500)
+    if(input != 1){
+        setTimeout(changeImage, 5500)
+    } 
 }
 
 async function main(){
