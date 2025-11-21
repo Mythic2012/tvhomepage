@@ -13,7 +13,6 @@ async function fetchPosters(){
             img.classList.add("fade")
             img.height = 800
             
-            console.log(img)
             document.getElementById("twoContainer").appendChild(img)
         });
     })
