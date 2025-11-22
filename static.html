@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/static.js"></script>
+    </head>
+
+    <body onload="main()">
+        <img src="images/icons/logo.jfif" id="logo">
+
+        <hr></hr>
+
+        <main>
+            <div class="containers">
+                <h1 id="clock">00:00:00</h1>
+                
+                <table>
+                    <tr>
+                        <th></th>
+                        <th><u>Iqamah</u></th>
+                    </tr>
+                    <tr>
+                        <td class="name">Fajr</td>
+                        <td class="time" id="fajr_iqamah">6:45<a id="timeSuffix">am</a></td>
+                    </tr>
+                    <tr>
+                        <td class="name">Dhuhr</td>
+                        <td class="time" id="dhuhr_iqamah">12:30<a id="timeSuffix">pm</a></td>
+                    </tr>
+                    <tr>
+                        <td class="name">Asr</td>
+                        <td class="time" id="asr_iqamah">2:30<a id="timeSuffix">pm</a></td>
+                    </tr>
+                    <tr>
+                        <td class="name">Maghrib</td>
+                        <td class="time" id="maghrib_iqamah">Sunset</td>
+                    </tr>
+                    <tr>
+                        <td class="name">Isha</td>
+                        <td class="time" id="isha_iqamah">7:45<a id="timeSuffix">pm</a></td>
+                    </tr>
+                </table>
+
+            </div>
+
+            <div class="containers">
+                <div id="twoContainer"> 
+                    <img src="images/icons/arrow-left.png" class="arrow" id="left" onclick="changeImage(1)">
+                    <img src="images/icons/arrow-right.png" class="arrow"  id="right" onclick="changeImage(1)">
+                    <img src="images/posters/call-of-duty.jpeg" class="poster fade" height="800">
+                    <img src="images/posters/quranic-arabic-poster.jpeg" class="poster fade" height="800" style="display: none;">
+                    <img src="images/posters/a5807d44-710f-4667-a623-9796874c01a5.jpeg" class="poster fade" height="800" style="display: none;">
+                </div>
+            </div>
+        </main>
+
+    </body>
+
+</html>
